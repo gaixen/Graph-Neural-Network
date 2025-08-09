@@ -1,0 +1,26 @@
+{
+  "name": "remote",
+  "version": "1.0.0",
+  "description": "This project is a full-stack web application that takes a GitHub repository URL, analyzes the codebase, and generates an interactive graph visualization of the code's structure. This tool helps developers understand file dependencies, function calls, and the overall architecture of a project.",
+  "main": "index.js",
+  "scripts": {
+    "start:backend": "npm start --prefix src/backend",
+    "start:frontend": "npm start --prefix src/frontend",
+    "start": "concurrently \"npm:start:backend\" \"npm:start:frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaixen/Graph-Neural-Network.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaixen/Graph-Neural-Network/issues"
+  },
+  "homepage": "https://github.com/gaixen/Graph-Neural-Network#readme",
+  "dependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
