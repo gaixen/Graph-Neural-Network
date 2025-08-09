@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+torch
+torch-geometric
+numpy
+python-multipart
+GitPython

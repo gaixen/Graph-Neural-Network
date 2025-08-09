@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.controls {
+  margin: 20px;
+}
+
+.controls input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 300px;
+}
+
+.controls button {
+  padding: 10px;
+}
+
+.graph-container {
+  border: 1px solid #ccc;
+  margin: 20px;
+}
