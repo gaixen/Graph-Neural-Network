@@ -1,5 +1,19 @@
 const axios = require('axios');
 
+// Function to get the content of a file
+const getFileContent = async (owner, repo, path) => {
+    try {
+        const response = await axios.get(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`);
+        // Content is base64 encoded
+        const content = Buffer.from(response.data.content, 'base64').toString('utf-8');
+        return content;
+    } catch (error) {
+        console.error('Error fetching file content:', error.response ? error.response.data : error.message);
+        throw new Error('Could not fetch file content.');
+    }
+};
+
+
 // Recursive function to fetch the entire file tree
 const getTree = async (owner, repo, tree_sha) => {
     try {
@@ -46,4 +60,5 @@ const analyzeRepo = async (repoUrl) => {
 
 module.exports = {
     analyzeRepo,
+    getFileContent,
 };
